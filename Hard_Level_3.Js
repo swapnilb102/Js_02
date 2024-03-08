@@ -13,4 +13,6 @@ const sentence3 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $
 console.log(sentence3.replace(/[^a-zA-Z0-9]/g, " "))
 
 /*4. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'*/
-const text = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.' ;
+const text = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+total_annual_income = (text.match(/\d+/g).reduce((a,b) => Number(a) + Number(b)));
+console.log("Total annual income of the person is" + " " + total_annual_income + " " + "euro.")
